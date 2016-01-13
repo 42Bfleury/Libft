@@ -6,7 +6,7 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 16:53:43 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 04:59:32 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/01/13 20:11:14 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strncat(char *dst, const char *src, size_t n)
 	{
 		i = 0;
 		dst_len = ft_strlen(dst);
-		while (src[i] && i++ < n)
+		while (i++ < n && src[i - 1])
 			dst[dst_len + i - 1] = src[i - 1];
-		dst[dst_len + i] = '\0';
+		dst[dst_len + i - 1] = '\0';
 	}
 	return (dst);
 }
