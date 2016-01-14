@@ -32,6 +32,7 @@ SRC		= ft_abs.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
+		ft_max.c \
 		ft_memalloc.c \
 		ft_memccpy.c \
 		ft_memchr.c \
@@ -40,8 +41,12 @@ SRC		= ft_abs.c \
 		ft_memdel.c \
 		ft_memmove.c \
 		ft_memset.c \
-		ft_max.c \
 		ft_min.c \
+		ft_printbit_char.c \
+		ft_printbit_int.c \
+		ft_printbit_long.c \
+		ft_printbit_short.c \
+		ft_printnbit.c \
 		ft_putchar.c \
 		ft_putchar_fd.c \
 		ft_putendl.c \

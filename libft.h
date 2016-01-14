@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/18 10:00:57 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/01/14 03:35:14 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,10 @@ void				ft_strclr(char *s);
 void				ft_putchar(char c);
 void				ft_memdel(void **ap);
 void				ft_strdel(char **as);
+void				ft_printbit_int(int n);
+void				ft_printbit_char(char n);
+void				ft_printbit_long(long n);
+void				ft_printbit_short(short n);
 void				ft_putstr(const char *str);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_bzero(void *s, size_t n);
@@ -79,6 +83,7 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void				ft_printnbit(long n, size_t size, size_t count, char c);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 
 void				*ft_memalloc(size_t size);
