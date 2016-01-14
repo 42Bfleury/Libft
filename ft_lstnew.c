@@ -6,13 +6,13 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 01:14:17 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/07 10:45:29 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/01/14 07:45:32 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list*ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*ptr;
 	void	*data;
