@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/01/14 03:35:14 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/01/18 19:36:50 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int					ft_islower(int c);
 int					ft_tolower(int c);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
+int					ft_pow(int nb, int pow);
 int					ft_atoi(const char *str);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strequ(const char *s1, const char *s2);

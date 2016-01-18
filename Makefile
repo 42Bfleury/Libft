@@ -42,6 +42,7 @@ SRC		= ft_abs.c \
 		ft_memmove.c \
 		ft_memset.c \
 		ft_min.c \
+		ft_pow.c \
 		ft_printbit_char.c \
 		ft_printbit_int.c \
 		ft_printbit_long.c \
