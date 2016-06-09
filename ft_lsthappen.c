@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printnbit.c                                     :+:      :+:    :+:   */
+/*   ft_lsthappen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 02:07:01 by bfleury           #+#    #+#             */
-/*   Updated: 2016/02/19 04:49:15 by bfleury          ###   ########.fr       */
+/*   Created: 2016/06/09 06:06:12 by bfleury           #+#    #+#             */
+/*   Updated: 2016/06/09 07:14:00 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_printnbit(long n, size_t size, size_t count, char c)
+void	ft_lsthappen(t_list **alst, t_list *elem)
 {
-	size_t	i;
-	char	bits[64];
+	t_list		*tmp;
 
-	i = 0;
-	while (i++ < size)
-		bits[i - 1] = (n >> (i - 1) & 1) ? '1' : '0';
-	while (--i)
+	tmp = *alst;
+	if (alst && elem)
 	{
-		if (i < (size - 1) && !(i % count))
-			ft_putchar(c);
-		ft_putchar(bits[i - 1]);
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = elem;
 	}
 }

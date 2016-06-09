@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/01/18 19:36:50 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/06/09 06:11:12 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void				ft_putstr_fd(const char *str, int fd);
 void				ft_putendl_fd(const char *str, int fd);
 void				ft_lstadd(t_list **alst, t_list *elem);
 void				ft_striter(char *s, void (*f)(char *));
+void				ft_lsthappen(t_list **alst, t_list *elem);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));

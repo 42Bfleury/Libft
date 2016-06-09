@@ -6,12 +6,12 @@
 #    By: bfleury <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#*   Updated: 2015/12/07 14:07:51 by bfleury          ###   ########.fr       *#
+#*   Updated: 2016/06/09 06:20:26 by bfleury          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-CC		= gcc
+CC		= clang
 CFLAGS	= -Wall -Wextra -Werror
 
 SRC		= ft_abs.c \
@@ -29,6 +29,7 @@ SRC		= ft_abs.c \
 		ft_lstadd.c \
 		ft_lstdel.c \
 		ft_lstdelone.c \
+		ft_lsthappen.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
@@ -88,7 +89,7 @@ SRC		= ft_abs.c \
 OBJ		= $(SRC:.c=.o)
 
 $(NAME):
-		$(CC) -c $(SRC)
+		$(CC) $(CFLAGS) -c $(SRC)
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
 
