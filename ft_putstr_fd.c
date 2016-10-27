@@ -6,14 +6,14 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 05:31:22 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 02:50:57 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 22:33:40 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	ft_putstr_fd(const char *str, int fd)
 {
-	if (str)
+	if (str && fd > 0)
 		write(fd, str, ft_strlen(str));
 }

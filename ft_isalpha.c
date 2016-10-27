@@ -6,13 +6,15 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 01:30:43 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 05:33:07 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 21:58:28 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int		ft_isalpha(int c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	return (0);
 }

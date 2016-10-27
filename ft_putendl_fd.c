@@ -6,15 +6,15 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 05:38:35 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 02:50:11 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 22:32:57 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	ft_putendl_fd(const char *str, int fd)
 {
-	if (str)
+	if (str && fd > 0)
 	{
 		ft_putstr_fd(str, fd);
 		ft_putchar_fd('\n', fd);

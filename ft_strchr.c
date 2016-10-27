@@ -6,13 +6,21 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 17:40:41 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/07 03:02:40 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 19:50:09 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	return (ft_memchr(s, c, ft_strlen(s) + 1));
+	char	*str;
+	str = (char*)s;
+	while (*str)
+	{
+		if (*str == c)
+			return (str);
+		str++;
+	}
+	return (NULL);
 }

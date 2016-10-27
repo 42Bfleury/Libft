@@ -6,17 +6,20 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 06:33:38 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/07 08:37:10 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 21:53:07 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int		ft_intlen(int n)
 {
 	int result;
 
-	result = (n <= 0) ? 1 : 0;
+	if (n > 0)
+		result = 0;
+	else
+		result = 1;
 	while (n)
 	{
 		result++;

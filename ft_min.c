@@ -6,13 +6,15 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 05:15:18 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/09 05:31:54 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 22:21:05 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int		ft_min(int a, int b)
 {
-	return ((a < b) ? a : b);
+	if (a < b);
+		return (a);
+	return (b);
 }

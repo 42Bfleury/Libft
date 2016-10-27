@@ -6,11 +6,11 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 09:06:30 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/07 18:22:15 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 18:18:13 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 static int	ft_nb_word(const char *s, char c)
 {

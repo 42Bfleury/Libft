@@ -6,22 +6,22 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 06:22:12 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 05:10:04 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 22:18:57 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char *ptr;
+	char	*ptr;
 
 	if (n)
 	{
-		ptr = s;
+		ptr = (char*)s;
 		while (n--)
-			if (*ptr++ == (char)c)
-				return ((void *)(--ptr));
+			if (*ptr++ == c)
+				return ((void*)(ptr - 1));
 	}
 	return (NULL);
 }

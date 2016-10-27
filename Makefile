@@ -6,7 +6,7 @@
 #    By: bfleury <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#*   Updated: 2016/06/09 06:20:26 by bfleury          ###   ########.fr       *#
+#*   Updated: 2016/10/27 21:34:29 by bfleury          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC		= ft_abs.c \
 		ft_lstadd.c \
 		ft_lstdel.c \
 		ft_lstdelone.c \
-		ft_lsthappen.c \
+		ft_lstappend.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
@@ -53,6 +53,8 @@ SRC		= ft_abs.c \
 		ft_putchar_fd.c \
 		ft_putendl.c \
 		ft_putendl_fd.c \
+		ft_putfloat.c \
+		ft_putfloat_fd.c \
 		ft_putnbr.c \
 		ft_putnbr_fd.c \
 		ft_putstr.c \

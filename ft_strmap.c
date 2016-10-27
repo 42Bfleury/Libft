@@ -6,11 +6,11 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 12:10:03 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/07 18:00:25 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 18:16:17 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

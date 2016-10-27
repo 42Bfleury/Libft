@@ -6,13 +6,14 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 08:48:06 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/18 02:19:11 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 20:29:59 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	return (ft_strncpy(dst, src, (ft_strlen(src) + 1)));
+	ft_strncpy(dst, src, (ft_strlen(src) + 1));
+	return (dst);
 }

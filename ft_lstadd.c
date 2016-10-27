@@ -6,11 +6,11 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 02:54:15 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/07 17:40:51 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 18:00:13 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	ft_lstadd(t_list **alst, t_list *elem)
 {

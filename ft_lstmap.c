@@ -6,17 +6,17 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 03:02:06 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/07 09:04:31 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 22:16:43 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *tmp;
-	t_list *tmp2;
-	t_list *result;
+	t_list	*tmp;
+	t_list	*tmp2;
+	t_list	*result;
 
 	if (!lst || !f)
 		return (NULL);

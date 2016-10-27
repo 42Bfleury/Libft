@@ -6,11 +6,11 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 08:24:19 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 04:53:04 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 20:02:22 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
@@ -19,10 +19,14 @@ char	*ft_strncpy(char *dst, const char *src, size_t n)
 	if (n && dst != src)
 	{
 		i = 0;
-		while (src[i] && i++ < n)
-			dst[i - 1] = src[i - 1];
-		while (i < n)
-			dst[i++] = '\0';
+		while (src[i] && i < n)
+		{
+			if (src[i])
+				dst[i] = src[i];
+			else
+				dst[i] = 0;
+			i++;
+		}
 	}
 	return (dst);
 }

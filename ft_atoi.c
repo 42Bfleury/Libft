@@ -6,17 +6,17 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 06:17:47 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 05:31:12 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 22:12:18 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int result;
-	int negative;
+	int		i;
+	int		result;
+	int		negative;
 
 	i = 0;
 	result = 0;
@@ -28,5 +28,7 @@ int		ft_atoi(const char *str)
 		negative = (str[i++] == '-') ? 1 : 0;
 	while (ft_isdigit(str[i]))
 		result = (result * 10) + (str[i++] - '0');
-	return ((negative) ? -result : result);
+	if (negative)
+		return (-result);
+	return (result);
 }

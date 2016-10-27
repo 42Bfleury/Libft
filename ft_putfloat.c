@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_putfloat.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/06 02:05:27 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/27 18:00:37 by bfleury          ###   ########.fr       */
+/*   Created: 2016/10/27 17:51:02 by bfleury           #+#    #+#             */
+/*   Updated: 2016/10/27 22:33:04 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+void		ft_putfloat(float d)
 {
-	del((*alst)->content, (*alst)->content_size);
-	free(*alst);
-	*alst = NULL;
+	ft_putfloat_fd(d, 1);
 }
