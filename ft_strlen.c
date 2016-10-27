@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:36:18 by bfleury           #+#    #+#             */
-/*   Updated: 2015/12/17 04:36:50 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/27 12:22:45 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *str)
 {
-	const char		*i;
+	int		i;
 
-	i = str;
-	while (*i)
+	i = 0;
+	while (str[i])
 		i++;
-	return (i - str);
+	return (i);
 }
