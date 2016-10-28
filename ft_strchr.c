@@ -6,7 +6,7 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 17:40:41 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/28 10:09:53 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/28 12:26:46 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-
-	str = (char*)s;
-	while (*str)
+	while (*s)
 	{
-		if (*str == c)
-			return (str);
-		str++;
+		if (*s == c)
+			return ((char*)s);
+		s++;
 	}
-	if (*str == c)
-		return (str);
+	if (*s == c)
+		return ((char*)s);
 	return (NULL);
 }
