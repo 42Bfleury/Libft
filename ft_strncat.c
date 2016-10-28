@@ -6,7 +6,7 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/05 16:53:43 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/27 20:23:31 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/28 04:00:46 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *dst, const char *src, size_t n)
 {
-	size_t	i;
-	size_t	dst_len;
+	size_t		i;
+	size_t		dst_len;
 
 	if (n && dst != src)
 	{
