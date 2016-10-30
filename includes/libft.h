@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 15:38:52 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/30 19:24:50 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int					ft_min(int a, int b);
 int					ft_max(int a, int b);
 int					ft_pow(int nb, int pow);
 int					ft_atoi(const char *str);
+int					ft_wordlen(const char *s, char c);
+int					ft_countwords(const char *s, char c);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strequ(const char *s1, const char *s2);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);

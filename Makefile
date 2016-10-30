@@ -17,6 +17,7 @@ CFLAGS	= -Wall -Wextra -Werror
 SRC		= ft_abs.c \
 		ft_atoi.c \
 		ft_bzero.c \
+		ft_countwords.c \
 		ft_intlen.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
@@ -89,7 +90,8 @@ SRC		= ft_abs.c \
 		ft_strtrim.c \
 		ft_strupper.c \
 		ft_tolower.c \
-		ft_toupper.c
+		ft_toupper.c \
+		ft_wordlen.c
 
 OBJ		= $(SRC:.c=.o)
 
