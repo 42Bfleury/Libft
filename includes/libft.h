@@ -6,12 +6,13 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/27 21:32:44 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/30 02:00:03 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define MAX_INT_LENGTH (sizeof(int) * 8)
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -49,6 +50,7 @@ char				*ft_itoa(int n);
 char				*ft_strnew(size_t size);
 char				*ft_strdup(const char *s);
 char				*ft_strtrim(const char *s);
+char				*ft_itoa_base(int nb, int base);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				**ft_strsplit(const char *s, char c);

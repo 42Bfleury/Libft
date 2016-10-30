@@ -6,7 +6,7 @@
 #    By: bfleury <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#*   Updated: 2016/10/27 21:34:29 by bfleury          ###   ########.fr       *#
+#*   Updated: 2016/10/30 01:58:58 by bfleury          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC		= ft_abs.c \
 		ft_isprint.c \
 		ft_isupper.c \
 		ft_itoa.c \
+		ft_itoa_base.c \
 		ft_lstadd.c \
 		ft_lstdel.c \
 		ft_lstdelone.c \

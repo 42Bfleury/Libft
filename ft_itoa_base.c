@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/05 16:53:43 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/29 16:09:53 by bfleury          ###   ########.fr       */
+/*   Created: 2016/10/30 00:27:42 by bfleury           #+#    #+#             */
+/*   Updated: 2016/10/30 02:00:22 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *dst, const char *src, size_t n)
+char	*ft_itoa_base(int nb, int base)
 {
-	size_t		i;
+	int		i;
+	int		negative;
+	char	*table;
+	char	result[MAX_INT_LENGTH + 1];
 
-	if (n && dst != src)
+	if (base < 2 || base > 36)
+		return (NULL);
+	i = MAX_INT_LENGTH;
+	negative = 0;
+	table = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	if (nb < 0)
 	{
-		i = 0;
-		while (dst[i])
-			i++;
-		while (n-- && *src)
-			dst[i++] = *src++;
-		dst[i] = 0;
+		negative = 1;
+		nb = -nb;
 	}
-	return (dst);
+	result[i--] = 0;
+	while (nb)
+	{
+		result[i--] = table[nb % base];
+		nb /= base;
+	}
+	if (negative)
+		result[i--] = '-';
+	return (ft_strdup(result + i + 1));
 }
