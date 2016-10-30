@@ -30,7 +30,7 @@ SRC		= ft_abs.c \
 		ft_lstadd.c \
 		ft_lstdel.c \
 		ft_lstdelone.c \
-		ft_lsthappen.c \
+		ft_lstappend.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
