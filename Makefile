@@ -6,7 +6,7 @@
 #    By: bfleury <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#*   Updated: 2016/10/30 01:58:58 by bfleury          ###   ########.fr       *#
+#*   Updated: 2016/10/30 02:38:19 by bfleury          ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC		= ft_abs.c \
 		ft_lstadd.c \
 		ft_lstdel.c \
 		ft_lstdelone.c \
-		ft_lstappend.c \
+		ft_lsthappen.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstnew.c \
@@ -55,7 +55,6 @@ SRC		= ft_abs.c \
 		ft_putendl.c \
 		ft_putendl_fd.c \
 		ft_putfloat.c \
-		ft_putfloat_fd.c \
 		ft_putnbr.c \
 		ft_putnbr_fd.c \
 		ft_putstr.c \
@@ -73,6 +72,7 @@ SRC		= ft_abs.c \
 		ft_strjoin.c \
 		ft_strlcat.c \
 		ft_strlen.c \
+		ft_strlower.c \
 		ft_strmap.c \
 		ft_strmapi.c \
 		ft_strncat.c \
@@ -86,6 +86,7 @@ SRC		= ft_abs.c \
 		ft_strstr.c \
 		ft_strsub.c \
 		ft_strtrim.c \
+		ft_strupper.c \
 		ft_tolower.c \
 		ft_toupper.c
 
@@ -106,4 +107,4 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: clean fclean

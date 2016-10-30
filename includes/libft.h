@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 02:00:03 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/30 02:37:38 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int					ft_strnequ(const char *s1, const char *s2, size_t n);
 
 char				*ft_itoa(int n);
 char				*ft_strnew(size_t size);
+char				*ft_strlower(char *str);
+char				*ft_strupper(char *str);
 char				*ft_strdup(const char *s);
 char				*ft_strtrim(const char *s);
 char				*ft_itoa_base(int nb, int base);
@@ -80,12 +82,11 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_bzero(void *s, size_t n);
 void				ft_putendl(const char *str);
 void				ft_putchar_fd(char c, int fd);
-void				ft_putfloat_fd(float d, int fd);
 void				ft_putstr_fd(const char *str, int fd);
 void				ft_putendl_fd(const char *str, int fd);
 void				ft_lstadd(t_list **alst, t_list *elem);
 void				ft_striter(char *s, void (*f)(char *));
-void				ft_lstappend(t_list **alst, t_list *elem);
+void				ft_lsthappen(t_list **alst, t_list *elem);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
