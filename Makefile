@@ -18,7 +18,6 @@ SRC		= ft_abs.c \
 		ft_atoi.c \
 		ft_bzero.c \
 		ft_countwords.c \
-		ft_intlen.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
@@ -45,6 +44,7 @@ SRC		= ft_abs.c \
 		ft_memmove.c \
 		ft_memset.c \
 		ft_min.c \
+		ft_nblen.c \
 		ft_pow.c \
 		ft_printbit_char.c \
 		ft_printbit_int.c \
