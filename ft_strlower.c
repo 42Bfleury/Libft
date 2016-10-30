@@ -6,11 +6,11 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/30 02:32:00 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 02:35:03 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/30 15:01:51 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strlower(char *str)
 {

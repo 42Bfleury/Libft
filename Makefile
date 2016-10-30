@@ -55,6 +55,7 @@ SRC		= ft_abs.c \
 		ft_putendl.c \
 		ft_putendl_fd.c \
 		ft_putfloat.c \
+		ft_putfloat_fd.c \
 		ft_putnbr.c \
 		ft_putnbr_fd.c \
 		ft_putstr.c \
@@ -107,4 +108,4 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY: clean fclean
+.PHONY: clean

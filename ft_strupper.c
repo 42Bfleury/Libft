@@ -6,13 +6,13 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/30 02:35:20 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 02:36:14 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/30 15:05:05 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-char	*ft_strlower(char *str)
+char	*ft_strupper(char *str)
 {
 	char	*ptr;
 
