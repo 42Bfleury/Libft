@@ -94,17 +94,25 @@ SRC		= ft_abs.c \
 OBJ		= $(SRC:.c=.o)
 
 $(NAME):
-		$(CC) $(CFLAGS) -c $(SRC)
-		ar rc $(NAME) $(OBJ)
-		ranlib $(NAME)
+		@echo "Generating objects..."
+		@$(CC) $(CFLAGS) -c $(SRC)
+		@echo "Objects generated with success!"
+		@echo "Generating $(NAME)..."
+		@ar rc $(NAME) $(OBJ)
+		@ranlib $(NAME)
+		@echo "$(NAME) generated with success!"
 
 all:	$(NAME)
 
 clean:
-		rm -f $(OBJ)
+		@echo "Removing objects..."
+		@rm -f $(OBJ)
+		@echo "Objects removed with success!"
 
 fclean:	clean
-		rm -f $(NAME)
+		@echo "Removing $(NAME)..."
+		@rm -f $(NAME)
+		@echo "$(NAME) removed removed with success!"
 
 re: fclean all
 
