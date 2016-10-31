@@ -6,7 +6,7 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/27 21:26:29 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/27 22:33:11 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/31 13:18:18 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void		ft_putfloat_fd(float d, int fd)
 		ft_putnbr_fd((int)d, fd);
 		d -= (int)d;
 		ft_putchar_fd('.', fd);
+		if (d < 0)
+			d = -d;
 		if (d)
 		{
 			while (i++ < 6)

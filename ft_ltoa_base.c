@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_ltoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 08:19:00 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/31 15:11:02 by bfleury          ###   ########.fr       */
+/*   Created: 2016/10/31 14:26:11 by bfleury           #+#    #+#             */
+/*   Updated: 2016/10/31 14:26:33 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_ltoa_base(long nb, int base)
 {
 	int		i;
-	char	*result;
+	int		negative;
+	char	*table;
+	char	result[MAX_LONG_LENGTH + 1];
 
-	i = ft_intlen(n);
-	if (!(result = ft_strnew(i--)))
+	if (base < 2 || base > 36)
 		return (NULL);
-	if (n <= 0)
-		result[0] = (n == 0) ? '0' : '-';
-	while (n)
+	i = MAX_INT_LENGTH;
+	negative = 0;
+	table = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	if (nb < 0)
 	{
-		result[i--] = (n < 0) ? '0' - (n % 10) : '0' + (n % 10);
-		n /= 10;
+		negative = 1;
+		nb = -nb;
 	}
-	return (result);
+	result[i--] = 0;
+	while (nb)
+	{
+		result[i--] = table[nb % base];
+		nb /= base;
+	}
+	if (negative)
+		result[i--] = '-';
+	return (ft_strdup(result + i + 1));
 }

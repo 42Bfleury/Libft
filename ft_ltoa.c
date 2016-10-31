@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nblen.c                                         :+:      :+:    :+:   */
+/*   ft_ltoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/30 19:57:16 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 20:04:43 by bfleury          ###   ########.fr       */
+/*   Created: 2016/10/31 14:23:55 by bfleury           #+#    #+#             */
+/*   Updated: 2016/10/31 15:11:32 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_nblen(long n)
+char	*ft_ltoa(long n)
 {
-	int result;
+	int		i;
+	char	*result;
 
-	if (n > 0)
-		result = 0;
-	else
-		result = 1;
+	i = ft_longlen(n);
+	if (!(result = ft_strnew(i--)))
+		return (NULL);
+	if (n <= 0)
+		result[0] = (n == 0) ? '0' : '-';
 	while (n)
 	{
-		result++;
+		result[i--] = (n < 0) ? '0' - (n % 10) : '0' + (n % 10);
 		n /= 10;
 	}
 	return (result);

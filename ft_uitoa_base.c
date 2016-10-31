@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 08:19:00 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/31 15:11:02 by bfleury          ###   ########.fr       */
+/*   Created: 2016/10/31 15:51:02 by bfleury           #+#    #+#             */
+/*   Updated: 2016/10/31 15:52:08 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_uitoa_base(unsigned int nb, int base)
 {
 	int		i;
-	char	*result;
+	char	*table;
+	char	result[MAX_INT_LENGTH + 1];
 
-	i = ft_intlen(n);
-	if (!(result = ft_strnew(i--)))
+	if (base < 2 || base > 36)
 		return (NULL);
-	if (n <= 0)
-		result[0] = (n == 0) ? '0' : '-';
-	while (n)
+	i = MAX_INT_LENGTH;
+	table = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	result[i--] = 0;
+	while (nb)
 	{
-		result[i--] = (n < 0) ? '0' - (n % 10) : '0' + (n % 10);
-		n /= 10;
+		result[i--] = table[nb % base];
+		nb /= base;
 	}
-	return (result);
+	return (ft_strdup(result + i + 1));
 }

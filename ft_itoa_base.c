@@ -6,18 +6,18 @@
 /*   By: bfleury <benjamin.fleury@hotmail.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/30 00:27:42 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 19:45:17 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/31 14:28:53 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_itoa_base(long nb, int base)
+char	*ft_itoa_base(int nb, int base)
 {
 	int		i;
 	int		negative;
 	char	*table;
-	char	result[MAX_LONG_LENGTH + 1];
+	char	result[MAX_INT_LENGTH + 1];
 
 	if (base < 2 || base > 36)
 		return (NULL);

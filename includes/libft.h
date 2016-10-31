@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 20:04:38 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/31 15:59:51 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct		s_list
 }					t_list;
 
 int					ft_abs(int n);
-int					ft_nblen(long n);
+int					ft_intlen(int n);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_isdigit(int c);
@@ -37,10 +37,13 @@ int					ft_isupper(int c);
 int					ft_toupper(int c);
 int					ft_islower(int c);
 int					ft_tolower(int c);
+int					ft_longlen(long n);
 int					ft_min(int a, int b);
 int					ft_max(int a, int b);
 int					ft_pow(int nb, int pow);
 int					ft_atoi(const char *str);
+int					ft_uintlen(unsigned int n);
+int					ft_ulonglen(unsigned long n);
 int					ft_wordlen(const char *s, char c);
 int					ft_countwords(const char *s, char c);
 int					ft_strcmp(const char *s1, const char *s2);
@@ -49,18 +52,24 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 
-char				*ft_itoa(long n);
+char				*ft_itoa(int n);
+char				*ft_ltoa(long n);
 char				*ft_strnew(size_t size);
 char				*ft_strlower(char *str);
 char				*ft_strupper(char *str);
+char				*ft_uitoa(unsigned int n);
 char				*ft_strdup(const char *s);
+char				*ft_ultoa(unsigned long n);
 char				*ft_strtrim(const char *s);
-char				*ft_itoa_base(long nb, int base);
+char				*ft_itoa_base(int nb, int base);
+char				*ft_ltoa_base(long nb, int base);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				**ft_strsplit(const char *s, char c);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strcat(char *dst, const char *src);
+char				*ft_uitoa_base(unsigned int nb, int base);
+char				*ft_ultoa_base(unsigned long nb, int base);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strjoin(const char *s1, const char *s2);
