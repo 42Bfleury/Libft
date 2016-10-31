@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/31 15:55:17 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/31 15:56:30 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/10/31 16:33:46 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_ultoa(unsigned long n)
 	int		i;
 	char	*result;
 
-	i = ft_longlen(n);
+	i = ft_ulonglen(n);
 	if (!(result = ft_strnew(i--)))
 		return (NULL);
 	if (n <= 0)
