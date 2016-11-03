@@ -11,8 +11,15 @@
 # **************************************************************************** #
 
 NAME	= libft.a
+
+RED		= \033[31m
+YELLOW	= \033[33m
+GREEN	= \033[32m
+ENDCOLOR= \033[0m
+
 CC		= clang
 CFLAGS	= -Wall -Wextra -Werror
+RM		= rm -rf
 
 SRC		= ft_abs.c \
 		ft_atoi.c \
@@ -101,30 +108,34 @@ SRC		= ft_abs.c \
 		ft_ultoa.c \
 		ft_ultoa_base.c \
 		ft_wordlen.c
-
 OBJ		= $(SRC:.c=.o)
-
-$(NAME):
-		@echo "Generating objects..."
-		@$(CC) $(CFLAGS) -c $(SRC)
-		@echo "Objects generated with success!"
-		@echo "Generating $(NAME)..."
-		@ar rc $(NAME) $(OBJ)
-		@ranlib $(NAME)
-		@echo "$(NAME) generated with success!"
 
 all:	$(NAME)
 
-clean:
-		@echo "Removing objects..."
-		@rm -f $(OBJ)
-		@echo "Objects removed with success!"
+$(NAME): objects
+		@echo "$(YELLOW)Generating $(NAME) library...$(ENDCOLOR)"
+		@ar rc $(NAME) $(OBJ)
+		@ranlib $(NAME)
+		@echo "$(GREEN)$(NAME) library generated with success!$(ENDCOLOR)"
 
-fclean:	clean
-		@echo "Removing $(NAME)..."
-		@rm -f $(NAME)
-		@echo "$(NAME) removed removed with success!"
+
+objects:
+		@echo "$(YELLOW)Generating $(NAME) objects...$(ENDCOLOR)"
+		@$(CC) $(CFLAGS) -c $(SRC)
+		@echo "$(GREEN)$(NAME) objects generated with success!$(ENDCOLOR)"
+
+clean:
+		@echo "$(RED)Removing $(NAME) objects...$(ENDCOLOR)"
+		@$(RM) $(OBJ)
+		@echo "$(GREEN)$(NAME) objects removed with success!$(ENDCOLOR)"
+
+xclean:
+		@echo "$(RED)Removing $(NAME) library...$(ENDCOLOR)"
+		@$(RM) $(NAME)
+		@echo "$(GREEN)$(NAME) library removed removed with success!$(ENDCOLOR)"
+
+fclean:	clean xclean
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: all clean fclean re
