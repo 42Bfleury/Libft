@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 NAME	= libft.a
+TYPEFILE= library
 
 RED		= \033[31m
 YELLOW	= \033[33m
@@ -23,6 +24,7 @@ RM		= rm -rf
 
 SRC		= ft_abs.c \
 		ft_atoi.c \
+		ft_atoi_base.c \
 		ft_bzero.c \
 		ft_countwords.c \
 		ft_intlen.c \
@@ -108,34 +110,50 @@ SRC		= ft_abs.c \
 		ft_ultoa.c \
 		ft_ultoa_base.c \
 		ft_wordlen.c
+
 OBJ		= $(SRC:.c=.o)
 
 all:	$(NAME)
 
-$(NAME): objects
-		@echo "$(YELLOW)Generating $(NAME) library...$(ENDCOLOR)"
+$(NAME):
+		@echo "$(YELLOW)Generating $(NAME) objects...$(ENDCOLOR)"
+		@$(CC) $(CFLAGS) -c $(SRC)
+		@echo "$(GREEN)$(NAME) objects generated with success!$(ENDCOLOR)"
+		@echo "$(YELLOW)Generating $(NAME) $(TYPEFILE)...$(ENDCOLOR)"
 		@ar rc $(NAME) $(OBJ)
 		@ranlib $(NAME)
-		@echo "$(GREEN)$(NAME) library generated with success!$(ENDCOLOR)"
+		@echo "$(GREEN)$(NAME) $(TYPEFILE) generated with success!$(ENDCOLOR)"
 
+libftgnl: objectsgnl
+		@echo "$(YELLOW)Generating $(NAME) & GNL $(TYPEFILE)...$(ENDCOLOR)"
+		@ar rc $(NAME) $(OBJ) get_next_line.o
+		@ranlib $(NAME)
+		@echo "$(GREEN)$(NAME) & GNL $(TYPEFILE) generated with success!$(ENDCOLOR)"
 
 objects:
 		@echo "$(YELLOW)Generating $(NAME) objects...$(ENDCOLOR)"
 		@$(CC) $(CFLAGS) -c $(SRC)
 		@echo "$(GREEN)$(NAME) objects generated with success!$(ENDCOLOR)"
 
+objectsgnl:
+		@echo "$(YELLOW)Generating $(NAME) & GNL objects...$(ENDCOLOR)"
+		@$(CC) $(CFLAGS) -c $(SRC) ../GNL/get_next_line.c
+		@echo "$(GREEN)$(NAME) & GNL objects generated with success!$(ENDCOLOR)"
+
 clean:
 		@echo "$(RED)Removing $(NAME) objects...$(ENDCOLOR)"
-		@$(RM) $(OBJ)
+		@$(RM) $(OBJ) get_next_line.o
 		@echo "$(GREEN)$(NAME) objects removed with success!$(ENDCOLOR)"
 
 xclean:
-		@echo "$(RED)Removing $(NAME) library...$(ENDCOLOR)"
+		@echo "$(RED)Removing $(NAME) $(TYPEFILE)...$(ENDCOLOR)"
 		@$(RM) $(NAME)
-		@echo "$(GREEN)$(NAME) library removed removed with success!$(ENDCOLOR)"
+		@echo "$(GREEN)$(NAME) $(TYPEFILE) removed removed with success!$(ENDCOLOR)"
 
 fclean:	clean xclean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+regnl: fclean GNLlibft
+
+.PHONY: all libftgnl objects objectsgnl clean

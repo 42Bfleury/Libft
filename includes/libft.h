@@ -6,7 +6,7 @@
 /*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/31 15:59:51 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/03 08:48:35 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int					ft_atoi(const char *str);
 int					ft_uintlen(unsigned int n);
 int					ft_ulonglen(unsigned long n);
 int					ft_wordlen(const char *s, char c);
+int					ft_atoi_base(char *str, char *base);
 int					ft_countwords(const char *s, char c);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strequ(const char *s1, const char *s2);
