@@ -14,6 +14,10 @@
 # define LIBFT_H
 # define MAX_INT_LENGTH (sizeof(int) * 8)
 # define MAX_LONG_LENGTH (sizeof(long) * 8)
+# define BASE_2  "01"
+# define BASE_8  "01234567"
+# define BASE_10 "0123456789"
+# define BASE_16 "0123456789abcdef"
 
 # include <unistd.h>
 # include <stdlib.h>
