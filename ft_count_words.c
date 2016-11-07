@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countwords.c                                    :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bfleury <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/30 19:20:28 by bfleury           #+#    #+#             */
-/*   Updated: 2016/10/30 19:20:52 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/07 04:31:45 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_countwords(const char *s, char c)
+int		ft_count_words(const char *s, char c)
 {
 	int		word;
 	int		result;

@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 09:06:30 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/06 08:47:15 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/07 04:32:15 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char		**ft_strsplit(const char *s, char c)
 	if (s)
 	{
 		i = 0;
-		nb_word = ft_countwords(s, c);
+		nb_word = ft_count_words(s, c);
 		if (!(result = (char**)malloc(sizeof(char*) * (nb_word + 1))))
 			return (NULL);
 		while (nb_word--)

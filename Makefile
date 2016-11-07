@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bfleury <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#*   Updated: 2016/10/30 02:38:19 by bfleury          ###   ########.fr       *#
+#    Updated: 2016/11/07 04:32:56 by bfleury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC		= ft_abs.c \
 		ft_atoi.c \
 		ft_atoi_base.c \
 		ft_bzero.c \
-		ft_countwords.c \
+		ft_count_words.c \
 		ft_intlen.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
