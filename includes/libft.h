@@ -6,18 +6,18 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 16:24:57 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/11 12:16:41 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/11 16:30:36 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define MAX_INT_LENGTH (sizeof(int) * 8)
-# define MAX_LONG_LENGTH (sizeof(long) * 8)
-# define BASE_2  "01"
-# define BASE_8  "01234567"
-# define BASE_10 "0123456789"
-# define BASE_16 "0123456789abcdef"
+# define MAX_INT_LENGTH		(sizeof(int) * 8)
+# define MAX_LONG_LENGTH	(sizeof(long) * 8)
+# define BASE_2				"01"
+# define BASE_8				"01234567"
+# define BASE_10			"0123456789"
+# define BASE_16			"0123456789abcdef"
 
 # include <unistd.h>
 # include <stdlib.h>

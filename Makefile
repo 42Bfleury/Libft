@@ -6,7 +6,7 @@
 #    By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#    Updated: 2016/11/11 16:20:29 by bfleury          ###   ########.fr        #
+#    Updated: 2016/11/11 16:33:42 by bfleury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
 
 clean:
 				@echo $(RMOBJECTS)
-				@$(RM) $(OBJ_DIR) get_next_line.o
+				@$(RM) $(OBJ_DIR)
 				@echo $(SUCCESS)
 
 xclean:
