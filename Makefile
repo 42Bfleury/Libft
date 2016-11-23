@@ -6,7 +6,7 @@
 #    By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#    Updated: 2016/11/12 20:51:15 by bfleury          ###   ########.fr        #
+#    Updated: 2016/11/23 12:24:10 by bfleury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,13 @@ TYPEFILE		= library
 RED				= \033[31m
 YELLOW			= \033[33m
 GREEN			= \033[1;32m
-ENDCOLOR		= \033[0m
+END				= \033[0m
 
-SUCCESS			= "$(GREEN)     [SUCCESS!]$(ENDCOLOR)"
-OBJECTS			= "$(YELLOW)Generating $(NAME) objects...$(ENDCOLOR)\c"
-PROJECT			= "$(YELLOW)Generating $(NAME) $(TYPEFILE)...$(ENDCOLOR)\c"
-RMOBJECTS		= "$(RED)Removing $(NAME) objects...  $(ENDCOLOR)\c"
-RMPROJECT		= "$(RED)Removing $(NAME) $(TYPEFILE)...  $(ENDCOLOR)\c"
+SUCCESS			= "$(GREEN)[SUCCESS!]$(END)"
+OBJECTS			= "$(YELLOW)Generating $(NAME) objects...     $(END)\c"
+PROJECT			= "$(YELLOW)Generating $(NAME) $(TYPEFILE)...     $(END)\c"
+RMOBJECTS		= "$(RED)Removing $(NAME) objects...       $(END)\c"
+RMPROJECT		= "$(RED)Removing $(NAME) $(TYPEFILE)...       $(END)\c"
 
 SRC_DIR			= srcs
 OBJ_DIR			= objs
