@@ -5,62 +5,113 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/12/07 05:59:52 by bfleury           #+#    #+#              #
-#    Updated: 2016/11/23 12:24:10 by bfleury          ###   ########.fr        #
+#    Created: 2024/01/04 23:06:16 by bfleury           #+#    #+#              #
+#    Updated: 2024/01/16 15:34:19 by bfleury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= libft.a
-TYPEFILE		= library
+NAME	= libft.a
 
-RED				= \033[31m
-YELLOW			= \033[33m
-GREEN			= \033[1;32m
-END				= \033[0m
+DEBUG	= 0
 
-SUCCESS			= "$(GREEN)[SUCCESS!]$(END)"
-OBJECTS			= "$(YELLOW)Generating $(NAME) objects...     $(END)\c"
-PROJECT			= "$(YELLOW)Generating $(NAME) $(TYPEFILE)...     $(END)\c"
-RMOBJECTS		= "$(RED)Removing $(NAME) objects...       $(END)\c"
-RMPROJECT		= "$(RED)Removing $(NAME) $(TYPEFILE)...       $(END)\c"
+CC		= cc
+CFLAGS	= -Wall -Wextra -Werror
 
-SRC_DIR			= srcs
-OBJ_DIR			= objs
-SRC				= $(shell find $(SRC_DIR) -name "*.c" -type f)
-OBJ				= $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+SRCS	= ft_isalpha.c\
+		ft_isdigit.c\
+		ft_isalnum.c\
+		ft_isascii.c\
+		ft_isprint.c\
+		ft_strlen.c\
+		ft_memset.c\
+		ft_bzero.c\
+		ft_memcpy.c\
+		ft_memmove.c\
+		ft_strlcpy.c\
+		ft_strlcat.c\
+		ft_toupper.c\
+		ft_tolower.c\
+		ft_strchr.c\
+		ft_strrchr.c\
+		ft_strncmp.c\
+		ft_memchr.c\
+		ft_memcmp.c\
+		ft_strnstr.c\
+		ft_atoi.c\
+		ft_calloc.c\
+		ft_strdup.c
+		
+SRCS	+= ft_substr.c\
+		ft_strjoin.c\
+		ft_strtrim.c\
+		ft_split.c\
+		ft_itoa.c\
+		ft_strmapi.c\
+		ft_striteri.c\
+		ft_putchar_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c\
 
-CC				= clang
-CFLAGS			= -Wall -Wextra -Werror
-RM				= rm -rf
+B_SRCS	= ft_lstnew.c\
+		ft_lstadd_front.c\
+		ft_lstsize.c\
+		ft_lstlast.c\
+		ft_lstadd_back.c\
+		ft_lstdelone.c\
+		ft_lstclear.c\
+		ft_lstiter.c\
+		ft_lstmap.c
 
-all:			build $(NAME)
+OBJS	= $(SRCS:.c=.o)
+B_OBJS	= $(B_SRCS:.c=.o)
 
-build :
-				@mkdir -p $(OBJ_DIR)
+all: debug $(NAME)
 
-$(NAME):		$(OBJ)
-				@echo $(PROJECT)
-				@ar rc $(NAME) $(OBJ)
-				@ranlib $(NAME)
-				@echo $(SUCCESS)
+debug:
+ifeq ($(DEBUG), 1)
+	@echo "DEBUG MODE :"
+endif
 
-$(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
-				@echo $(OBJECTS)
-				@$(CC) $(CFLAGS) -o $@ -c $<
-				@echo $(SUCCESS)
+$(NAME): $(OBJS)
+ifeq ($(DEBUG), 1)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
+else
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+endif
+
+bonus: $(OBJS) $(B_OBJS)
+ifeq ($(DEBUG), 1)
+	ar rc $(NAME) $(OBJS) $(B_OBJS)
+	ranlib $(NAME)
+else
+	@ar rc $(NAME) $(OBJS) $(B_OBJS)
+	@ranlib $(NAME)
+endif
+
+%.o: %.c
+ifeq ($(DEBUG), 1)
+	$(CC) $(CFLAGS) -c $< -o $@
+else
+	@$(CC) $(CFLAGS) -c $< -o $@
+endif
 
 clean:
-				@echo $(RMOBJECTS)
-				@$(RM) $(OBJ_DIR)
-				@echo $(SUCCESS)
+ifeq ($(DEBUG), 1)
+	rm -f $(OBJS) $(B_OBJS)
+else
+	@rm -f $(OBJS) $(B_OBJS)
+endif
 
-xclean:
-				@echo $(RMPROJECT)
-				@$(RM) $(NAME)
-				@echo $(SUCCESS)
+fclean: clean
+ifeq ($(DEBUG), 1)
+	rm -f $(NAME)
+else
+	@rm -f $(NAME)
+endif
 
-fclean:			clean xclean
+re:	fclean all
 
-re:				fclean all
-
-.PHONY:			all build clean xclean fclean re
+.PHONY:	debug clean fclean re
