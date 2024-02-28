@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 09:06:30 by bfleury           #+#    #+#             */
-/*   Updated: 2024/01/16 00:32:59 by bfleury          ###   ########.fr       */
+/*   Updated: 2024/02/28 18:09:19 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	_count_words(const char *s, char c)
 	return (result);
 }
 
-static int	_wordlen(const char *s, char c)
+static int	_word_len(const char *s, char c)
 {
 	int		result;
 
@@ -41,6 +41,17 @@ static int	_wordlen(const char *s, char c)
 	while (*s && *s++ != c)
 		result++;
 	return (result);
+}
+
+static void	*_clear_result(char ***result)
+{
+	int	i;
+
+	i = 0;
+	while ((*result)[i])
+		free((*result)[i++]);
+	free(*result);
+	return (NULL);
 }
 
 char	**ft_split(const char *s, char c)
@@ -61,10 +72,10 @@ char	**ft_split(const char *s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		wordlen = _wordlen(s, c);
+		wordlen = _word_len(s, c);
 		result[i] = ft_substr(s, 0, wordlen);
 		if (!result[i++])
-			return (NULL);
+			return (_clear_result(&result));
 		s += wordlen;
 	}
 	result[i] = NULL;
