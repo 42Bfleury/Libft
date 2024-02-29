@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 04:42:59 by bfleury           #+#    #+#             */
-/*   Updated: 2024/01/16 00:42:02 by bfleury          ###   ########.fr       */
+/*   Updated: 2024/02/29 12:26:21 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	char	*result;
 
 	lenght = ft_strlen(s) + 1;
-	result = (char *)malloc(sizeof(char) * lenght);
+	result = (char *)ft_calloc(lenght, sizeof(*result));
 	if (lenght && result)
 		ft_strlcpy(result, s, lenght);
 	return (result);

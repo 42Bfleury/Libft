@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 00:39:41 by bfleury           #+#    #+#             */
-/*   Updated: 2024/01/16 00:47:12 by bfleury          ###   ########.fr       */
+/*   Updated: 2024/02/29 12:32:25 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	char	*result;
 
 	result = NULL;
+	i = ft_strlen(s1) + ft_strlen(s2) + 1;
 	if (s1 && s2)
-		result = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+		result = (char *)ft_calloc(i, sizeof(*result));
 	if (result)
 	{
 		i = 0;

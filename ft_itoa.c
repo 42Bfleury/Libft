@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 04:50:51 by bfleury           #+#    #+#             */
-/*   Updated: 2024/01/16 00:21:44 by bfleury          ###   ########.fr       */
+/*   Updated: 2024/02/29 12:17:53 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 
 	neg = 1;
 	i = _intlen(n);
-	result = (char *)malloc(sizeof(char) * i + 1);
+	result = (char *)ft_calloc((i + 1), sizeof(*result));
 	if (!result)
 		return (NULL);
 	result[i--] = 0;

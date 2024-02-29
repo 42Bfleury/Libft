@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 01:14:17 by bfleury           #+#    #+#             */
-/*   Updated: 2024/01/10 23:14:01 by bfleury          ###   ########.fr       */
+/*   Updated: 2024/02/29 12:20:57 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*result;
 
-	result = (t_list *)malloc(sizeof(t_list) * 1);
+	result = (t_list *)ft_calloc(1, sizeof(*result));
 	if (!result)
 		return (NULL);
 	result->next = NULL;
