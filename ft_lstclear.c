@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 02:37:56 by bfleury           #+#    #+#             */
-/*   Updated: 2024/02/29 12:19:32 by bfleury          ###   ########.fr       */
+/*   Updated: 2024/02/29 14:27:15 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		next = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
+		ft_lstdelone(*lst, del);
 		*lst = next;
 	}
 	*lst = NULL;
