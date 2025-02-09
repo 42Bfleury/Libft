@@ -6,7 +6,7 @@
 #    By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 23:06:16 by bfleury           #+#    #+#              #
-#    Updated: 2025/02/09 01:21:40 by bfleury          ###   ########.fr        #
+#    Updated: 2025/02/09 13:47:49 by bfleury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ B_FILES				= ft_lstadd_back.c		\
 SRCS_DIR			= srcs
 SRCS				= $(addprefix $(SRCS_DIR)/, $(FILES))
 
-B_SRCS_DIR			= bonus_srcs
+B_SRCS_DIR			= srcs_bonus
 B_SRCS				= $(addprefix $(B_SRCS_DIR)/, $(B_FILES))
 
 OBJS_DIR			= objs
