@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 18:05:50 by bfleury           #+#    #+#             */
-/*   Updated: 2025/02/08 15:14:01 by bfleury          ###   ########.fr       */
+/*   Updated: 2025/02/12 00:35:44 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*next;
 
-	if (!lst || !del)
+	if (!lst || !*lst)
 		return ;
 	while (*lst)
 	{
