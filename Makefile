@@ -1,4 +1,4 @@
-# **************************************************************************** #
+#******************************************************************************#
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
@@ -6,9 +6,9 @@
 #    By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 23:06:16 by bfleury           #+#    #+#              #
-#    Updated: 2025/02/09 14:15:37 by bfleury          ###   ########.fr        #
+#    Updated: 2025/02/15 13:16:55 by bfleury          ###   ########.fr        #
 #                                                                              #
-# **************************************************************************** #
+#******************************************************************************#
 
 NAME				= libft.a
 
@@ -60,12 +60,6 @@ B_FILES				= ft_lstadd_back.c		\
 					ft_lstnew.c				\
 					ft_lstsize.c
 
-SRCS_DIR			= srcs
-SRCS				= $(addprefix $(SRCS_DIR)/, $(FILES))
-
-B_SRCS_DIR			= srcs_bonus
-B_SRCS				= $(addprefix $(B_SRCS_DIR)/, $(B_FILES))
-
 OBJS_DIR			= objs
 OBJS				= $(FILES:%.c=$(OBJS_DIR)/%.o)
 B_OBJS				= $(B_FILES:%.c=$(OBJS_DIR)/%.o)
@@ -83,10 +77,10 @@ bonus:				$(OBJS_DIR) $(OBJS) $(B_OBJS)
 $(OBJS_DIR):
 					@mkdir -p objs
 
-$(OBJS_DIR)/%.o:	$(SRCS_DIR)/%.c
+$(OBJS_DIR)/%.o:	%.c
 					@$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJS_DIR)/%.o:	$(B_SRCS_DIR)/%.c
+$(OBJS_DIR)/%.o:	%.c
 					@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -97,4 +91,4 @@ fclean: 			clean
 
 re:					fclean all
 
-.PHONY:				debug clean fclean re
+.PHONY:				clean fclean re
