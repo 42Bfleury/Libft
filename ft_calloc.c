@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 12:59:57 by bfleury           #+#    #+#             */
-/*   Updated: 2025/02/15 13:54:24 by bfleury          ###   ########.fr       */
+/*   Updated: 2025/02/15 18:16:37 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*result;
+	size_t	i;
 
 	if (2147483647 <= nmemb || 2147483647 <= size)
 	{
@@ -23,7 +24,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	}
 	result = malloc(nmemb * size);
+	i = 0;
 	if (result)
-		ft_bzero(result, nmemb * size);
+		while (i < nmemb * size)
+			((char *)result)[i++] = 0;
 	return (result);
 }
