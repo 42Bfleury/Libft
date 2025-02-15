@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 04:20:03 by bfleury           #+#    #+#             */
-/*   Updated: 2025/02/15 15:07:08 by bfleury          ###   ########.fr       */
+/*   Updated: 2025/02/15 17:27:29 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-t_list		*ft_lstlast(t_list *lst);
-t_list		*ft_lstnew(void *content);
-t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-size_t		ft_strlen(const char *str);
-size_t		ft_strlcat(char *dst, const char *src, size_t size);
-size_t		ft_strlcpy(char *dst, const char *src, size_t size);
+/* ******************************** LIBFT *********************************** */
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -71,4 +59,20 @@ void		*ft_calloc(size_t nmemb, size_t size);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
+
+/* ******************************** BONUS *********************************** */
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+t_list		*ft_lstlast(t_list *lst);
+t_list		*ft_lstnew(void *content);
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+size_t		ft_strlen(const char *str);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
+size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 #endif
